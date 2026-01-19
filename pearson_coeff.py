@@ -12,7 +12,7 @@ def pearson_coeff(x, y, y_name):
     r = cov_xy / (std_x*std_y)
     print(str(x_search)," vs "+str(y_name)+ ". R = " +str(r)) #Outputs correlation coefficient values
 
-x_search = 'xG' #Change this depending on what you want to compare
+x_search = 'CrdR' #Change this depending on what you want to compare
 x = df[x_search] #Selects the appropriate column
 
 for col in df.columns:
