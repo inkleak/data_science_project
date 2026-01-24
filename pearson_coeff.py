@@ -21,10 +21,10 @@ def graph(x, y, y_name, x_search):
     plt.xlabel(f'{x_search}') #Labelling
     plt.ylabel(f'{y_name}')
     plt.title(f'Plot of {y_name} against {x_search}')
-    plt.savefig(save_results_to + 'image.png', dpi=300) #Saves graph to "Graphs" folder
+    plt.savefig(save_results_to + f'{y_name}vs{x_search}.png', dpi=300) #Saves graph to "Graphs" folder
 
 x_search = input('Enter your first variable to compute with.\n') #Change this depending on what you want to compare
-y_search = input('Enter a variable to compare with your chosen x value.\n') #Other variable
+#y_search = input('Enter a variable to compare with your chosen x value.\n') #Other variable
 
 x = df[x_search] #Selects the appropriate column
 
@@ -34,9 +34,16 @@ for col in df.columns:
         if pd.api.types.is_numeric_dtype(y): #Makes sure variables are numerical in order for analysis
             pearson_coeff(x,y, col) #Running correlation coefficients 
 
-if y_search in df.columns:
-    y = df[y_search]
-    graph(x, y, y_search, x_search)
-else:
-    print("Not in DataFrame")
-    quit
+for col in df.columns:
+    if col!= x_search:
+        y = df[col]
+        if pd.api.types.is_numeric_dtype(y):
+            graph(x, y, col, x_search)
+
+
+#if y_search in df.columns:
+ #   y = df[y_search]
+#    graph(x, y, y_search, x_search)
+#else:
+ #   print("Not in DataFrame")
+ #   quit
