@@ -9,7 +9,7 @@ Originally, a data set from FootyStats was to be used. However this data set was
 
 ## Update Log
 
-- 19/01/26: Pearson Coefficient added, where $r = \frac{E[XYy] - E[X]E[Y]}{\sigma_X \sigma_Y}$. $r$ is the Pearson coefficient, $E[X]$, $E[Y]$ and $E[XY]$ are the expected values of input variables $X$, $Y$ and the product $XY$. $\sigma_X$ and $\sigma_Y$ are the standard deviation of input variables $X$ and $Y$ respectively.
+- 19/01/26: Pearson Coefficient added, where $r = \frac{E[XY] - E[X]E[Y]}{\sigma_X \sigma_Y}$. $r$ is the Pearson coefficient, $E[X]$, $E[Y]$ and $E[XY]$ are the expected values of input variables $X$, $Y$ and the product $XY$. $\sigma_X$ and $\sigma_Y$ are the standard deviation of input variables $X$ and $Y$ respectively.
 - 24/01/26: Saving graphs added. PCA Analysis beginning to be implemented.
 
 ## Current tasks
