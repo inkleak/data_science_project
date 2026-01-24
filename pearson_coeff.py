@@ -12,7 +12,7 @@ def pearson_coeff(x, y, y_name):
     print(str(x_search)," vs "+str(y_name)+ ". R = " +str(r)) #Outputs correlation coefficient values
 
 def graph(x, y, y_name, x_search):
-    save_results_to = 'C:/Projects/project_a/graphs/'
+    save_results_to = 'C:/Projects/project_a/graphs/vs_graphs/'
     x_bar, y_bar = np.mean(x), np.mean(y) #Calculating means for x and y
     fig = plt.figure()
     plt.scatter(x, y, s=8, color='black') #Scatter plot chosen
