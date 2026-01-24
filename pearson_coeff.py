@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt # Importing useful libraries
 import pandas as pd
-import sklearn as sklearn
 
 df = pd.read_csv("data/raw/premier-player-23-24.csv") # Loading Data Set
 
@@ -13,16 +12,16 @@ def pearson_coeff(x, y, y_name):
     print(str(x_search)," vs "+str(y_name)+ ". R = " +str(r)) #Outputs correlation coefficient values
 
 def graph(x, y, y_name, x_search):
-    x_bar = np.mean(x)
-    y_bar = np.mean(y)
+    save_results_to = 'C:/Projects/project_a/graphs/'
+    x_bar, y_bar = np.mean(x), np.mean(y) #Calculating means for x and y
     fig = plt.figure()
-    plt.scatter(x, y, s=8, color='black')
+    plt.scatter(x, y, s=8, color='black') #Scatter plot chosen
     plt.axvline(x=x_bar, linestyle='--', color='blue', linewidth=1, label='X_Mean'), plt.axhline(y=y_bar, linestyle='--', color ='red', linewidth=1, label='Y_Mean')
     plt.legend()
-    plt.xlabel(f'{x_search}')
+    plt.xlabel(f'{x_search}') #Labelling
     plt.ylabel(f'{y_name}')
     plt.title(f'Plot of {y_name} against {x_search}')
-    plt.show()
+    plt.savefig(save_results_to + 'image.png', dpi=300) #Saves graph to "Graphs" folder
 
 x_search = input('Enter your first variable to compute with.\n') #Change this depending on what you want to compare
 y_search = input('Enter a variable to compare with your chosen x value.\n') #Other variable
