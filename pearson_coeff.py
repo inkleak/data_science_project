@@ -24,7 +24,6 @@ def graph(x, y, y_name, x_search):
     plt.savefig(save_results_to + f'{y_name}vs{x_search}.png', dpi=300) #Saves graph to "Graphs" folder
 
 x_search = input('Enter your first variable to compute with.\n') #Change this depending on what you want to compare
-#y_search = input('Enter a variable to compare with your chosen x value.\n') #Other variable
 
 x = df[x_search] #Selects the appropriate column
 
@@ -39,11 +38,3 @@ for col in df.columns:
         y = df[col]
         if pd.api.types.is_numeric_dtype(y):
             graph(x, y, col, x_search)
-
-
-#if y_search in df.columns:
- #   y = df[y_search]
-#    graph(x, y, y_search, x_search)
-#else:
- #   print("Not in DataFrame")
- #   quit
