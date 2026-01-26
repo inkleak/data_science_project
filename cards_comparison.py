@@ -58,7 +58,7 @@ red_cards.append(reds_mffw)
 
 forward = df[df['Pos']=='FW']
 yellows_fw=np.sum(forward['CrdY'])
-reds_fw =np.sum(forward['CrdY'])
+reds_fw =np.sum(forward['CrdR'])
 yellow_cards.append(yellows_fw)
 red_cards.append(reds_fw)
 
