@@ -2,14 +2,16 @@ import numpy as np
 import matplotlib.pyplot as plt # Importing useful libraries
 import pandas as pd
 
+
 df = pd.read_csv("data/raw/premier-player-23-24.csv") # Loading Data Set
 
 def pearson_coeff(x, y, y_name):
     std_x, std_y = np.std(x), np.std(y)
     mean_x, mean_y, mean_xy = np.mean(x), np.mean(y), np.mean(x*y)
     cov_xy = mean_xy - (mean_x*mean_y)
-    r = cov_xy / (std_x*std_y)
+    r = cov_xy / (std_x*std_y)  #need to make this globally callable
     print(str(x_search)," vs "+str(y_name)+ ". R = " +str(r)) #Outputs correlation coefficient values
+
 
 def graph(x, y, y_name, x_search):
     save_results_to = 'C:/Projects/project_a/graphs/vs_graphs/'
@@ -38,3 +40,4 @@ for col in df.columns:
         y = df[col]
         if pd.api.types.is_numeric_dtype(y):
             graph(x, y, col, x_search)
+
