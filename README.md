@@ -11,9 +11,15 @@ Originally, a data set from FootyStats was to be used. However this data set was
 
 - 19/01/26: Pearson Coefficient added, where $r = \frac{E[XY] - E[X]E[Y]}{\sigma_X \sigma_Y}$. $r$ is the Pearson coefficient, $E[X]$, $E[Y]$ and $E[XY]$ are the expected values of input variables $X$, $Y$ and the product $XY$. $\sigma_X$ and $\sigma_Y$ are the standard deviation of input variables $X$ and $Y$ respectively.
 - 24/01/26: Saving graphs added. PCA Analysis beginning to be implemented.
+- 26/01/26: Visualisation of yellow/red cards implemented.
+- 30/01/26: K-means clustering finished.
+
 
 ## Current tasks
 
 - Implement a multiple linear regression model.
 - Implement polynomial regression model.
+- Gaussian clustering.
+- Residuals analysis, RMSE, MAE
+- Bayesian Inference?
 - More to be added in due course.
