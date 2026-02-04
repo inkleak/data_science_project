@@ -1,5 +1,7 @@
 # Clustering model for football
 
+library(mclust)
+
 PLdata<- read.csv("premier-player-23-24.csv",header = TRUE)
 
 # sub-setting data by position
@@ -126,3 +128,12 @@ FW$clusters<-kmeansfitFW$cluster
 DF$clusters<-kmeansfitDF$cluster
 GK$clusters<-kmeansfitGK$cluster
 MF$clusters<-kmeansfitMF$cluster
+
+
+# Gaussian mixed model
+
+GMM<- Mclust(ScaledFW,3)
+GMMclusters <- predict(GMM)$classification
+
+plot(ScaledFW, col = GMMclusters, main = "GMM Clustering")
+points(GMM$parameters$mean, col = 1:3, pch = 8, cex = 2)

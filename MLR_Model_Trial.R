@@ -27,3 +27,16 @@ ScaledGK<- ScaledGK[ , colSums(is.na(ScaledGK)) == 0 ]
 lmFW <- lm(PLdata_num$Gls~PLdata_num$Age+PLdata_num$X90s+PLdata_num$Ast+PLdata_num$xG)
 summary(lmFW)
 plot(lmFW)
+
+
+
+#polynomial regression
+
+x<- poly(PLdata_num$Age,degree = 3, raw = FALSE)
+y<- poly(PLdata_num$X90s,degree = 3, raw = FALSE)
+z<- poly(PLdata_num$Ast_90,degree = 3, raw = FALSE)
+w<- poly(PLdata_num$xG_90, degree = 3, raw = FALSE)
+
+pmFW <- lm(PLdata_num$Gls~x+y+z+w)
+summary(pmFW)
+
