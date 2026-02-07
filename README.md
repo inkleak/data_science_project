@@ -13,13 +13,13 @@ Originally, a data set from FootyStats was to be used. However this data set was
 - 24/01/26: Saving graphs added. PCA Analysis beginning to be implemented.
 - 26/01/26: Visualisation of yellow/red cards implemented.
 - 30/01/26: K-means clustering finished.
+- 07/02/26: Gaussian Mixture Model Implemented. Akaike and Bayesian Information Criterion calculated for this. $\text{AIC} = 2k -2\ln{\hat{L}}$ and $\text{BIC} = k\ln{n} - 2\ln{\hat{L}}$ where $k$ is number of parameters. $\hat{L}$ is the maximised value of the likelihood function and $n$ is the sample size. 
 
 
 ## Current tasks
 
 - Implement a multiple linear regression model.
 - Implement polynomial regression model.
-- Gaussian clustering.
 - Residuals analysis, RMSE, MAE
 - Bayesian Inference?
 - More to be added in due course.
